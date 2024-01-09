@@ -3,11 +3,14 @@ import TimerButtons from './TimerButtons'
 
 
 export default function Timer(props) {
-
+    const {time: {start, end, active}, setTime} = props;
 
     return (
-        <div class='timer'>
+        <div className='timer-container'>
+            <div className='timer'>
 
+            </div>
+            <TimerButtons setTime={setTime} />
         </div>
     )
 }
