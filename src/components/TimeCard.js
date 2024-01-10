@@ -48,7 +48,7 @@ const TimeStamp = (props) => {
     )
 }
 
-const GetHours = props => {
+export function GetHours(props) {
     const {timeEntry} = props;
     const hours = (timeEntry / 3600000).toFixed(2)
 

@@ -1,16 +1,29 @@
 .buttons-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
 }
 .button {
-    font-size: 30px;
-    background-color: white;
+    font-size: 25px;
     border: 2px solid;
     border-radius: 5px;
+    margin: 20px;
+    padding: 5px 10px;;
 }
 .start-btn {
     border-color: green;
+    background-color: rgb(211, 245, 211);
+}
+.start-btn:disabled {
+    border-color: rgb(0, 73, 0);
+    background-color: rgb(151, 151, 151);
 }
 .stop-btn {
     border-color: red;
+    background-color: rgb(252, 209, 209)
+}
+.stop-btn:disabled {
+    border-color: darkred;
+    background-color: rgb(185, 185, 185);
 }
