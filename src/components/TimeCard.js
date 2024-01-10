@@ -1,4 +1,5 @@
 import React from 'react'
+import './TimeCard.css'
 
 //----------------------------------------
 export default function TimeCard(props) {

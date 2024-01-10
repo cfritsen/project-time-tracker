@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import TimerButtons from './TimerButtons'
+import './Timer.css'
 
 
-//-------------------------------------
+
+//Component -------------------------------------
 export default function Timer(props) {
     const {time, time: {start, end, active}, setTime, addTimeEntry} = props;
 
@@ -17,14 +19,12 @@ export default function Timer(props) {
 
     return (
         <div className='timer-container'>
-            <div className='timer'>
-                {active ? <TimeFormat start={start} end={new Date()} /> : <TimeFormat start={start} end={end} />}
-            </div>
+            {active ? <TimeFormat start={start} end={new Date()} /> : <TimeFormat start={start} end={end} />}
             <TimerButtons time={time} setTime={setTime} addTimeEntry={addTimeEntry} />
         </div>
     )
 }
-//-------------------------------------
+//End Component-------------------------------------
 
 //Format Helper for Timer
 function TimeFormat(props) {
@@ -36,6 +36,6 @@ function TimeFormat(props) {
     const seconds = Math.floor(((timeElapsed % 3600000) % 60000) / 1000)
 
     return (
-        <span>{hours < 10 ? '0' + hours : hours} : {minutes < 10 ? '0' + minutes : minutes} : {seconds < 10 ? '0' + seconds : seconds}</span>
+        <div className ='timer'>{hours < 10 ? '0' + hours : hours} : {minutes < 10 ? '0' + minutes : minutes} : {seconds < 10 ? '0' + seconds : seconds}</div>
     )
 }

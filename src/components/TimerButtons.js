@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import './TimerButtons'
 
 //-------------------------------------------
 export default function TimerButtons(props) {

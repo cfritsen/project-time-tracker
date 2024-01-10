@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Timer from './Timer'
 import TimeCardList from './TimeCardList'
+import './ProjectTimer.css'
 
 //-------------------------------------------
 export default function ProjectTimer() {
