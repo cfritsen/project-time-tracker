@@ -37,10 +37,10 @@ const DateStamp = (props) => {
 const TimeStamp = (props) => {
     const {start, end} = props;
 
-    const startHours = start.getHours()
-    const startMinutes = start.getMinutes()
-    const endHours = end.getHours()
-    const endMinutes = end.getMinutes()
+    const startHours = start.getHours() < 10 ? '0' + start.getHours() : start.getHours()
+    const startMinutes = start.getMinutes() < 10 ? '0' + start.getMinutes() : start.getMinutes()
+    const endHours = end.getHours() < 10 ? '0' + end.getHours() : end.getHours()
+    const endMinutes = end.getMinutes() < 10 ? '0' + end.getMinutes() : end.getMinutes()
 
     return (
         <span className='time'>{startHours}:{startMinutes} - {endHours}:{endMinutes}</span>
