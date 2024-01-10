@@ -2,27 +2,28 @@ import React, {useState} from 'react'
 import Timer from './Timer'
 import TimeCardList from './TimeCardList'
 
-
+//-------------------------------------------
 export default function ProjectTimer() {
     const [time, setTime] = useState({
-        start: Date.now(),
-        end: Date.now(),
+        start: new Date(),
+        end: new Date(),
         active: false
     })
-    const [timeEntry, setTimeEntry] = useState([])
+    const [timeEntryList, setTimeEntryList] = useState([])
  
     const updateTime = (update) => {
         setTime(update);
     }
     
-    const updateTimeEntry = (update) => {
-        setTimeEntry([...timeEntry, update]);
+    const addTimeEntry = (update) => {
+        setTimeEntryList([...timeEntryList, update]);
     }
 
     return (
         <div class='timer-container'>
-            <Timer time={time} setTime={updateTime} setTimeEntry={updateTimeEntry} />
-            <TimeCardList timeEntry={timeEntry} />
+            <Timer time={time} setTime={updateTime} addTimeEntry={addTimeEntry} />
+            <TimeCardList timeEntryList={timeEntryList} />
         </div>
     )
 }
+//-----------------------------------------------
