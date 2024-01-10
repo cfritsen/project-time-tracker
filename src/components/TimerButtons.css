@@ -11,6 +11,9 @@
     margin: 20px;
     padding: 5px 10px;;
 }
+.button:hover{
+    cursor: pointer;
+}
 .start-btn {
     border-color: green;
     background-color: rgb(211, 245, 211);
