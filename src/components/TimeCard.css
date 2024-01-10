@@ -1,0 +1,28 @@
+.timecard {
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.411);
+    text-align: right;
+    margin: 10px;
+}
+.timecard .date {
+    float: left;
+    clear: left;
+    color: grey;
+    font-style: italic;
+}
+.time-stamp {
+    padding-bottom: 35px;
+}
+.timecard .time {
+    float: right;
+    clear: right;
+    padding-left: 30px;
+}
+.timecard .hours {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 10px;
+}
